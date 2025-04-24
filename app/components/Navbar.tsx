@@ -43,7 +43,7 @@ const Navbar = () => {
 				>
 					<Link href="https://www.linkedin.com/in/abd-shekho/" target="_blank">
 						<Image
-							src="/mainLogo.png"
+							src="/mainLogo.webp"
 							width={80}
 							height={80}
 							alt="logo"

@@ -35,7 +35,6 @@ const Contact = () => {
 		setLoading(true);
 		if(!formRef.current) return;
 
-		console.log(formRef.current);
 		emailjs
 			.sendForm(
 				"service_3jh66n8",

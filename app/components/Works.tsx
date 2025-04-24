@@ -33,14 +33,13 @@ const ProjectCard = ({
 	platform
 }: ProjectCardProps) => {
 	return (
-		<motion.div variants={ fadeIn("up", "spring", index * 0.5, 0.75) }>
 			<Tilt
 				options={ {
 					max: 45,
 					scale: 1,
-					speed: 450,
+					speed: 150,
 				} }
-				className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full"
+				className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
 			>
 				<div className="relative w-full h-[230px]">
 					<Image
@@ -48,7 +47,7 @@ const ProjectCard = ({
 						width={ 1000 }
 						height={ 1000 }
 						alt="project_image"
-						className="w-full h-full object-cover rounded-2xl"
+						className="w-full object-cover rounded-2xl"
 					/>
 
 					<div className="absolute inset-0 flex justify-end m-3 card-img_hover">
@@ -97,7 +96,6 @@ const ProjectCard = ({
 					)) }
 				</div>
 			</Tilt>
-		</motion.div>
 	);
 };
 

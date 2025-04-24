@@ -22,7 +22,6 @@ const ExperienceCard = ({ experience,index }: ExperienceCardProps) => {
     once: false,
     amount: 0.3
   });
-  console.log(isTimelineInView)
   return (
     <div ref={timelineRef } id="experience-card" className="my-10">
     <VerticalTimelineElement

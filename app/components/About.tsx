@@ -29,7 +29,7 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
 			>
 				<motion.div
 					ref={ cardRef }
-					variants={ fadeIn("right", "spring", 0.5 * index, 0.75) }
+					variants={ textVariant() }
 					initial="hidden"
 					animate={ isCardInView ? "show" : "hidden" }
 					className="w-full green-pink-gradient p-px rounded-[20px] shadow-card"

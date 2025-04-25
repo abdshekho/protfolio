@@ -4,6 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as random from "maath/random";
 import { Suspense, useRef, useState } from "react";
 import type { Points as PointProps } from "three";
+import { useIsMobile } from "@/app/hooks/useIsMobile";
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 const Stars = (props: any) => {
@@ -35,6 +36,13 @@ const Stars = (props: any) => {
 };
 
 const StarsCanvas = () => {
+	const isMobile = useIsMobile();
+
+	// Don't render anything if on mobile
+	if (isMobile) {
+		return null;
+	}
+
 	return (
 		<div className="w-full h-auto absolute inset-0 z-[-1]">
 			<Canvas camera={{ position: [0, 0, 1] }}>

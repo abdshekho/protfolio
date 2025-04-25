@@ -10,23 +10,26 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { useIsMobile } from "@/app/hooks/useIsMobile";
 
 type ExperienceCardProps = {
   experience: (typeof experiences)[0];
   index: number;
+  isMobile: boolean;
 };
 
-const ExperienceCard = ({ experience,index }: ExperienceCardProps) => {
+const ExperienceCard = ({ experience, index, isMobile }: ExperienceCardProps) => {
   const timelineRef = useRef(null);
   const isTimelineInView = useInView(timelineRef, { 
-    once: false,
+    once: isMobile, // If mobile, only animate once (effectively disabling repeated animations)
     amount: 0.3
   });
+  
   return (
-    <div ref={timelineRef } id="experience-card" className="my-10">
+    <div ref={timelineRef} id="experience-card" className="my-10">
     <VerticalTimelineElement
       position={index%2 === 0 ? "left" : "right" }
-      visible={ isTimelineInView}
+      visible={isMobile ? true : isTimelineInView} // Always visible on mobile
       className=""
       contentStyle={ {
         background: "#195568",
@@ -72,14 +75,20 @@ const ExperienceCard = ({ experience,index }: ExperienceCardProps) => {
 };
 
 const Experience = () => {
+  const isMobile = useIsMobile();
   const headingRef = useRef(null);
   const isHeadingInView = useInView(headingRef, { 
-    once: false,
+    once: isMobile, // If mobile, only animate once
     amount: 0.5
   });
+  
   return (
     <>
-      <motion.div  ref={headingRef} variants={ textVariant() }  animate={isHeadingInView ? "show" : "hidden"}>
+      <motion.div 
+        ref={headingRef} 
+        variants={textVariant()} 
+        animate={isMobile ? "show" : (isHeadingInView ? "show" : "hidden")}
+      >
         <p className="styles.sectionSubText text-center">
           What I have done so far
         </p>
@@ -91,26 +100,29 @@ const Experience = () => {
           { experiences.map((experience, index) => (
             <ExperienceCard
               key={ `experience-${index}` }
-              experience={ experience } index={index}
+              experience={ experience } 
+              index={index}
+              isMobile={isMobile}
             />
           )) }
         </VerticalTimeline>
       </div>
       <div className="mt-20 w-full flex justify-center items-center">
-				<a href="#Projects">
-					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-						<motion.div
-							animate={ { y: [0, 24, 0] } }
-							transition={ {
-								duration: 1.5,
-								repeat: Number.POSITIVE_INFINITY,
-								repeatType: "loop",
-							} }
-							className="w-3 h-3 rounded-full bg-secondary mb-1"
-						/>
-					</div>
-				</a>
-			</div>
+        <a href="#Projects">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={isMobile ? {} : { y: [0, 24, 0] }}
+              transition={isMobile ? {} : {
+                duration: 1.5,
+                repeat: Number.POSITIVE_INFINITY,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              style={isMobile ? { marginTop: '24px' } : {}}
+            />
+          </div>
+        </a>
+      </div>
     </>
   );
 };

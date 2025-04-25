@@ -41,7 +41,9 @@
   color-scheme: dark;
   user-select: none;
 }
-
+.cardOfsocial {
+  user-select: text;
+}
 .hash-span {
   /* margin-top: -100px; */
   padding-bottom: 100px;

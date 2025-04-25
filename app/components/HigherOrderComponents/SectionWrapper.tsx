@@ -2,23 +2,29 @@
 import { staggerContainer } from "@/app/utils/motion";
 import { motion, useInView } from "framer-motion";
 import { useRef, type FC } from "react";
+import { useIsMobile } from "@/app/hooks/useIsMobile";
 
 const SectionWrapper = (Component: FC, idName: string) => {
 	return function HOC() {
 		const sectionRef = useRef(null);
+		const isMobile = useIsMobile();
+		
+		// If on mobile, we'll use a simpler approach with no repeated animations
 		const isInView = useInView(sectionRef, { 
-		  once: false, // This is the key change - set to false to repeat animations
+		  once: isMobile, // On mobile, only animate once (effectively disabling repeated animations)
 		  amount: 0.15 // How much of the element needs to be in view
 		});
+		
 		return (
 			<motion.section
 				variants={staggerContainer()}
 				ref={sectionRef}
 				initial="hidden"
 				whileInView="show"
-				animate={isInView ? "show" : "hidden"}
+				// On mobile, always show the section once it's been animated once
+				animate={isMobile ? "show" : (isInView ? "show" : "hidden")}
 				exit="hidden"
-				viewport={{ once: true, amount: 0.25 }}
+				viewport={{ once: isMobile, amount: 0.25 }}
 				className="padding max-w-7xl mx-auto relative z-0"
 			>
 				<span className="hash-span" id={idName}>

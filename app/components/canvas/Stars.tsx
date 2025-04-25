@@ -38,7 +38,6 @@ const Stars = (props: any) => {
 const StarsCanvas = () => {
 	const isMobile = useIsMobile();
 
-	// Don't render anything if on mobile
 	if (isMobile) {
 		return null;
 	}

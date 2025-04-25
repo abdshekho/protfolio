@@ -84,19 +84,28 @@ const About = () => {
 				animate={ isParagraphInView ? "show" : "hidden" }
 				className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
 			>
-				I am a passionate Front-End Web Developer with a strong focus on crafting dynamic, responsive, and user-friendly web applications. Over the years, I have honed my skills in modern JavaScript frameworks such as React and Angular , allowing me to build highly interactive and visually appealing interfaces that deliver an exceptional user experience.
-
-				In addition to my front-end expertise, I have gained solid experience in Back-End Development using Node.js and its powerful framework NestJS . This has enabled me to develop scalable and efficient server-side solutions, ensuring seamless communication between the front-end and back-end layers of web applications.
-
-				As someone who is deeply curious about web security, I also enjoy exploring web vulnerabilities as a hobby. While my primary focus remains on development, understanding potential security flaws helps me write more robust and secure code, adding an extra layer of value to my projects.
-
-				With a combination of technical proficiency, hands-on experience, and a continuous drive to learn, I strive to create innovative solutions that not only meet but exceed client expectations. Whether it&apos;s building cutting-edge applications or diving into the intricacies of web security, I am always eager to take on new challenges and grow both personally and professionally.
-
+				I am a passionate Front-End Web Developer with a strong focus on crafting dynamic, responsive, and user-friendly web applications. Over the years, I have honed my skills in modern JavaScript frameworks such as React and Angular , allowing me to build highly interactive and visually appealing interfaces that deliver an exceptional user experience. In addition to my front-end expertise, I have gained solid experience in Back-End Development using Node.js and its powerful framework NestJS . This has enabled me to develop scalable and efficient server-side solutions, ensuring seamless communication between the front-end and back-end layers of web applications.
+				I also enjoy exploring web vulnerabilities as a hobby.
 			</motion.p>
 			<div className="mt-20 flex flex-wrap gap-10">
 				{ services.map((service, index) => (
 					<ServiceCard key={ service.title } index={ index } { ...service } />
 				)) }
+			</div>
+			<div className="mt-20 w-full flex justify-center items-center">
+				<a href="#work">
+					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+						<motion.div
+							animate={ { y: [0, 24, 0] } }
+							transition={ {
+								duration: 1.5,
+								repeat: Number.POSITIVE_INFINITY,
+								repeatType: "loop",
+							} }
+							className="w-3 h-3 rounded-full bg-secondary mb-1"
+						/>
+					</div>
+				</a>
 			</div>
 		</>
 	);

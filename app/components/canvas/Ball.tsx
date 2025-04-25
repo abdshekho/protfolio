@@ -3,7 +3,6 @@ import CanvasLoader from "@/app/components/Loader";
 import {
 	Decal,
 	Float,
-	OrbitControls,
 	Preload,
 	useTexture,
 } from "@react-three/drei";

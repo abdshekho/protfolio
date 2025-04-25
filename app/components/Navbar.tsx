@@ -41,7 +41,7 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<Link href="https://www.linkedin.com/in/abd-shekho/" target="_blank">
+					<Link href="#About">
 						<Image
 							src="/mainLogo.webp"
 							width={80}

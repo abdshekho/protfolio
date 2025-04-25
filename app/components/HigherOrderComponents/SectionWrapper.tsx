@@ -8,7 +8,7 @@ const SectionWrapper = (Component: FC, idName: string) => {
 		const sectionRef = useRef(null);
 		const isInView = useInView(sectionRef, { 
 		  once: false, // This is the key change - set to false to repeat animations
-		  amount: 0.25 // How much of the element needs to be in view
+		  amount: 0.15 // How much of the element needs to be in view
 		});
 		return (
 			<motion.section

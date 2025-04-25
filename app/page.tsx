@@ -1,5 +1,5 @@
 import {
-	About,
+	// About,
 	Contact,
 	Experience,
 	Feedbacks,
@@ -16,8 +16,8 @@ export default function Home() {
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 				<Navbar />
 				<Hero />
+			{/* <About /> */}
 			</div>
-			<About />
 			<Experience />
 			<Works />
 			<Tech />

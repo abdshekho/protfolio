@@ -383,17 +383,17 @@ const projects :{
 			"A Next.JS Full Stack Issue Tracker made using Next.Js, ShadCN UI, Prisma, mySQL with latest features like Next.JS Server Components, and Serverless features.",
 		tags: [
 			{
-				name: "next",
-				color: "blue-text-gradient",
+				name: "Next",
+				color: "black-text-gradient",
 			},
 			{
 				name: "tailwind",
 				color: "green-text-gradient",
 			},
-			{
-				name: "shadCN",
-				color: "orange-text-gradient",
-			},
+			// {
+			// 	name: "shadCN",
+			// 	color: "orange-text-gradient",
+			// },
 			{
 				name: "mySQL",
 				color: "green-text-gradient",

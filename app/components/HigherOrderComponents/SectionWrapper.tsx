@@ -4,14 +4,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef, type FC } from "react";
 import { useIsMobile } from "@/app/hooks/useIsMobile";
 
-const SectionWrapper = (Component: FC, idName: string) => {
+const SectionWrapper = (Component: FC, idName: string,isUseInView?: boolean) => {
 	return function HOC() {
 		const sectionRef = useRef(null);
 		const isMobile = useIsMobile();
 		
 		// If on mobile, we'll use a simpler approach with no repeated animations
 		const isInView = useInView(sectionRef, { 
-		  once: isMobile, // On mobile, only animate once (effectively disabling repeated animations)
+		  once: isMobile ||!isUseInView, // On mobile, only animate once (effectively disabling repeated animations)
 		  amount: 0.15 // How much of the element needs to be in view
 		});
 		

@@ -94,7 +94,7 @@ const ProjectCard = ({
 		</div>
 	) : (
 		// Use motion.div and Tilt for desktop
-		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+		<div>
 			<Tilt
 				options={{
 					max: 45,
@@ -158,17 +158,11 @@ const ProjectCard = ({
 					))}
 				</div>
 			</Tilt>
-		</motion.div>
+		</div>
 	);
 };
 
 const Works = () => {
-	const headingRef = useRef(null);
-	const isHeadingInView = useInView(headingRef, {
-		once: false,
-		amount: 0.5
-	});
-	
 	// Add mobile detection
 	const [isMobile, setIsMobile] = useState(false);
 	
@@ -192,7 +186,7 @@ const Works = () => {
 				</div>
 			) : (
 				// Animated version for desktop
-				<motion.div variants={textVariant()} ref={headingRef} animate={isHeadingInView ? "show" : "hidden"}>
+				<motion.div variants={textVariant()}>
 					<p className="sectionSubText main-gradient">My latest work</p>
 					<h2 className="sectionHeadText">Projects.</h2>
 				</motion.div>
@@ -237,4 +231,4 @@ const Works = () => {
 	);
 };
 
-export default SectionWrapper(Works, "Projects");
+export default SectionWrapper(Works, "Projects",false);

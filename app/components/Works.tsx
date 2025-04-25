@@ -187,13 +187,13 @@ const Works = () => {
 			{isMobile ? (
 				// Static version for mobile (no animations)
 				<div>
-					<p className="sectionSubText">My latest work</p>
+					<p className="sectionSubText main-gradient">My latest work</p>
 					<h2 className="sectionHeadText">Projects.</h2>
 				</div>
 			) : (
 				// Animated version for desktop
 				<motion.div variants={textVariant()} ref={headingRef} animate={isHeadingInView ? "show" : "hidden"}>
-					<p className="sectionSubText">My latest work</p>
+					<p className="sectionSubText main-gradient">My latest work</p>
 					<h2 className="sectionHeadText">Projects.</h2>
 				</motion.div>
 			)}

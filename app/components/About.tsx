@@ -74,7 +74,7 @@ const About = () => {
 				initial="hidden"
 				animate={ isTextInView ? "show" : "hidden" }
 			>
-				<p className="sectionSubText">Introduction</p>
+				<p className="sectionSubText main-gradient">Introduction</p>
 				<h2 className="styles.sectionHeadText">Overview.</h2>
 			</motion.div>
 

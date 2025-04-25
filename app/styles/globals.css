@@ -49,6 +49,27 @@
   padding-bottom: 100px;
   display: block;
 }
+.main-gradient {
+  background: #adce32e6;
+  background: linear-gradient(to right, #adce32e6 30%, #01aee8 60%, #01aee8 97.5%);
+  background: -webkit-linear-gradient(left, #adce32e6 30%, #01aee8 60%, #01aee8 97.5%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.main-gradient-center {
+  background: #adce32e6;
+  background: linear-gradient(to right, #adce32e6 30%, #01aee8 60%, #01aee8 97.5%);
+  background: -webkit-linear-gradient(left, #adce32e6 30%, #01aee8 60%, #01aee8 97.5%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
 
 .black-gradient {
   background: #000000;

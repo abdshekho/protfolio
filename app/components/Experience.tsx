@@ -53,7 +53,7 @@ const ExperienceCard = ({ experience, index, isMobile }: ExperienceCardProps) =>
       <div>
         <h3 className="text-white text-[24px] font-bold">{ experience.title }</h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="main-gradient text-[16px] font-semibold"
           style={ { margin: 0 } }
         >
           { experience.company_name }
@@ -89,7 +89,7 @@ const Experience = () => {
         variants={textVariant()} 
         animate={isMobile ? "show" : (isHeadingInView ? "show" : "hidden")}
       >
-        <p className="styles.sectionSubText text-center">
+        <p className="styles.sectionSubText main-gradient-center text-center">
           What I have done so far
         </p>
         <h2 className="sectionHeadText text-center">Work Experience.</h2>

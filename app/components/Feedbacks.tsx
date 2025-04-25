@@ -77,13 +77,13 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
 	return (
-		<div className="mt-12 bg-black-100 rounded-[20px]">
-			<div className="padding bg-tertiary rounded-2xl min-h-[300px]">
+		<div className="mt-12  bg-tertiary rounded-[20px]">
+			<div className="padding bg-black-100 rounded-2xl min-h-[300px]">
 				<motion.div variants={textVariant()}>
-					<h2 className="sectionHeadText">Social Profiles</h2>
-					<p className="sectionSubText">
+					<p className="sectionSubText main-gradient">
 						Click on social media icons to check out..
 					</p>
+					<h2 className="sectionHeadText">Social Profiles</h2>
 				</motion.div>
 			</div>
 			<div className="paddingX -mt-20 pb-14 flex flex-wrap gap-7">

@@ -91,7 +91,7 @@ const Experience = () => {
   console.log("isMobile:", isHeadingInView);
   
   return (
-    <>
+    <div className="relative">
       <motion.div 
         ref={headingRef} 
         variants={textVariant()} 
@@ -116,7 +116,7 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
       {isMobile?null:
-      <div className="mt-20 w-full flex justify-center items-center sm:sticky sm:bottom-0">
+      <div className="mt-20 w-full sm:sticky sm:bottom-[30px]">
         <a href={isHeadingInView ? "#TechnoPlus" : "#Projects"}>
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
@@ -132,8 +132,8 @@ const Experience = () => {
           </div>
         </a>
       </div>}
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, "work",true,true);

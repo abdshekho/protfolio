@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, type FC } from "react";
 import { useIsMobile } from "@/app/hooks/useIsMobile";
 
-const SectionWrapper = (Component: FC, idName: string,isUseInView?: boolean) => {
+const SectionWrapper = (Component: FC, idName: string,isUseInView?: boolean,isFullWidth?: boolean) => {
 	return function HOC() {
 		const sectionRef = useRef(null);
 		const isMobile = useIsMobile();
@@ -25,7 +25,7 @@ const SectionWrapper = (Component: FC, idName: string,isUseInView?: boolean) => 
 				animate={isMobile ? "show" : (isInView ? "show" : "hidden")}
 				exit="hidden"
 				viewport={{ once: isMobile, amount: 0.25 }}
-				className="padding max-w-7xl mx-auto relative z-0"
+				className={`padding ${isFullWidth? "" : "max-w-7xl"} mx-auto relative z-0`}
 			>
 				<span className="hash-span" id={idName}>
 					{" "}

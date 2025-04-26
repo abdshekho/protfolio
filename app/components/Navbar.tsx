@@ -51,9 +51,12 @@ const Navbar = () => {
 							className="object-contain"
 						/>
 					</Link>
-					<p className="text-white text-[14px] sm:text-[18px] font-bold cursor-pointer flex flex-direction-column">
-						Abdulrahman&nbsp; <span className=" ">shaikh-alshabab</span>
-					</p>
+					<div className="text-white text-[14px] sm:text-[18px] font-bold cursor-pointer flex flex-col">
+					<span >
+						Abdulrahman 
+					</span>
+					<span className=" ">shaikh-alshabab</span>
+					</div>
 				</div>
 
 				<ul className="list-none hidden sm:flex flex-row gap-10">

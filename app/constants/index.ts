@@ -205,7 +205,7 @@ const testimonials = [
 			"Whatsapp",
 		name: "+963953679641",
 		image: "/socialmedia/whatsapp.svg",
-		link: "https://api.whatsapp.com/send?phone=+9639536796418&text=%22",
+		link: "https://api.whatsapp.com/send?phone=+963953679641&text=%22",
 	},
 ];
 
@@ -383,17 +383,13 @@ const projects :{
 			"A Next.JS Full Stack Issue Tracker made using Next.Js, ShadCN UI, Prisma, mySQL with latest features like Next.JS Server Components, and Serverless features.",
 		tags: [
 			{
-				name: "Next",
+				name: "javascript",
 				color: "black-text-gradient",
 			},
 			{
-				name: "tailwind",
+				name: "css",
 				color: "green-text-gradient",
 			},
-			// {
-			// 	name: "shadCN",
-			// 	color: "orange-text-gradient",
-			// },
 			{
 				name: "mySQL",
 				color: "green-text-gradient",

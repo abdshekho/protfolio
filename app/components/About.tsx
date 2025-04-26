@@ -66,7 +66,7 @@ const About = () => {
 
 	return (
 		// <div className="pt-[25vh] sm:pt-[50vh]">s
-		<div className="absolute bottom-[10px]  paddingX z-10">
+		<div className="absolute bottom-[30px]  paddingX z-10">
 			<motion.div
 				ref={ textRef }
 				variants={ textVariant() }
@@ -82,7 +82,7 @@ const About = () => {
 				variants={ fadeIn("", "", 0.1, 1) }
 				initial="hidden"
 				animate={ isParagraphInView ? "show" : "hidden" }
-				className="mt-4 text-secondary text-[12px] sm:text-[17px] max-w-[3xl] sm:leading-[30px] leading-1"
+				className="mt-4 text-secondary text-[12px] sm:text-[17px]  sm:leading-[30px] leading-1 max-w-5xl mx-auto"
 			>
 				I am a passionate Front-End Web Developer with a strong focus on crafting dynamic, responsive, and user-friendly web applications. Over the years, I have honed my skills in modern JavaScript frameworks such as React and Angular , allowing me to build highly interactive and visually appealing interfaces that deliver an exceptional user experience. In addition to my front-end expertise, I have gained solid experience in Back-End Development using Node.js and its powerful framework NestJS . This has enabled me to develop scalable and efficient server-side solutions, ensuring seamless communication between the front-end and back-end layers of web applications.
 				I also enjoy exploring web vulnerabilities as a hobby.
@@ -93,7 +93,7 @@ const About = () => {
 				)) }
 			</div> */}
 			{isMobile?null:
-			<div className="mt-20 w-full flex justify-center items-center">
+			<div className="mt-20 w-full">
 				<a href="#work">
 					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
 						<motion.div

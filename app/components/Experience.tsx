@@ -60,7 +60,7 @@ const ExperienceCard = ({ experience, index, isMobile }: ExperienceCardProps) =>
         </p>
       </div>
 
-      <ul className="mt-5 list-disc ml-5 space-y-2">
+      <ul className="mt-5 list-disc sm:ml-5 ml-2 space-y-2">
         { experience.points.map((point, index) => (
             <li
               key={ `experience-point-${index}` }

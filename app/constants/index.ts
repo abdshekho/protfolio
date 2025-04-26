@@ -118,7 +118,7 @@ const experiences = [
 		],
 	},
 	{
-		title: "Angulara Developer",
+		title: "React Developer",
 		company_name: "Focus for trading & contracting",
 		icon: "/company/focus.jpeg",
 		iconBg: "#fefefe",

@@ -22,12 +22,18 @@ const ExperienceCard = ({ experience, index, isMobile }: ExperienceCardProps) =>
   const timelineRef = useRef(null);
   const isTimelineInView = useInView(timelineRef, { 
     once: isMobile, // If mobile, only animate once (effectively disabling repeated animations)
-    amount: 0.3
+    amount: 0.1
   });
+  // useInView(ref, {
+  //   root: "-100px",  // تعديل المسافة من حدود الشاشة
+  //   once: true,            // التفعيل مرة وحدة فقط
+  //   amount: 0.5            // النسبة المطلوبة من العنصر لتكون مرئية (0.5 = 50%)
+  // });
   
   return (
-    <div ref={timelineRef} id="experience-card" className="my-10">
+    <div ref={timelineRef} id="experience-card" className="my-5">
     <VerticalTimelineElement
+    id={experience.company_name}
       position={index%2 === 0 ? "left" : "right" }
       visible={isMobile ? true : isTimelineInView} // Always visible on mobile
       className=""
@@ -51,7 +57,7 @@ const ExperienceCard = ({ experience, index, isMobile }: ExperienceCardProps) =>
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{ experience.title }</h3>
+        <h3 className="text-white sm:text-[24px] text-[20px] font-bold">{ experience.title }</h3>
         <p
           className="main-gradient text-[16px] font-semibold"
           style={ { margin: 0 } }
@@ -77,10 +83,12 @@ const ExperienceCard = ({ experience, index, isMobile }: ExperienceCardProps) =>
 const Experience = () => {
   const isMobile = useIsMobile();
   const headingRef = useRef(null);
-  const isHeadingInView = useInView(headingRef, { 
+  const isHeadingInView = useInView(headingRef, {
+    margin: "100px", 
     once: isMobile, // If mobile, only animate once
-    amount: 0.5
+    amount: 0.5,
   });
+  console.log("isMobile:", isHeadingInView);
   
   return (
     <>
@@ -92,10 +100,10 @@ const Experience = () => {
         <p className="styles.sectionSubText main-gradient-center text-center">
           What I have done so far
         </p>
-        <h2 className="sectionHeadText text-center">Work Experience.</h2>
+        <h2 className="sectionHeadText text-center sm:mt-[-20px]">Work Experience.</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="mt-10 flex flex-col">
         <VerticalTimeline>
           { experiences.map((experience, index) => (
             <ExperienceCard
@@ -107,22 +115,23 @@ const Experience = () => {
           )) }
         </VerticalTimeline>
       </div>
-      <div className="mt-20 w-full flex justify-center items-center">
-        <a href="#Projects">
+      {isMobile?null:
+      <div className="mt-20 w-full flex justify-center items-center sm:sticky sm:bottom-0">
+        <a href={isHeadingInView ? "#TechnoPlus" : "#Projects"}>
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
-              animate={isMobile ? {} : { y: [0, 24, 0] }}
-              transition={isMobile ? {} : {
+              animate={ { y: [0, 24, 0] }}
+              transition={ {
                 duration: 1.5,
                 repeat: Number.POSITIVE_INFINITY,
                 repeatType: "loop",
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
-              style={isMobile ? { marginTop: '24px' } : {}}
+              // style={isMobile ? { marginTop: '24px' } : {}}
             />
           </div>
         </a>
-      </div>
+      </div>}
     </>
   );
 };

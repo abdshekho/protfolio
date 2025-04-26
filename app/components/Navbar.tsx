@@ -28,7 +28,7 @@ const Navbar = () => {
 	return (
 		<nav
 			className={`paddingX
-			w-full flex items-center py-5 fixed top-0 z-20 ${
+			w-full flex items-center pb-0 sm:pb-5 sm:pt-5 fixed top-0 z-20 ${
 				scrolled ? "bg-primary" : "bg-transparent"
 			}`}
 		>
@@ -51,8 +51,8 @@ const Navbar = () => {
 							className="object-contain"
 						/>
 					</Link>
-					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-						Abdulrahman&nbsp; <span className="sm:block hidden ">| shaikh-alshabab</span>
+					<p className="text-white text-[14px] sm:text-[18px] font-bold cursor-pointer flex flex-direction-column">
+						Abdulrahman&nbsp; <span className=" ">shaikh-alshabab</span>
 					</p>
 				</div>
 

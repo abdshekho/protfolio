@@ -112,7 +112,7 @@ const experiences = [
 		date: "Feb 2021 -Jul  2022",
 		points: [
 			"Determining the design and layout of web applications with accuracy.",
-			"Developing +10 web applications by using responsive with UI elements via react concept for smooth performance.",
+			"Developed over 10 responsive web applications using React, focusing on smooth UI performance.",
 			"Successful Website Development: Designed and developed a visually appealing and user-friendly portfolio website using React.",
 			// "Positive Business Impact: Contributed to +54.25% sales and overall business growth through the improved website."
 		],
@@ -126,8 +126,8 @@ const experiences = [
 		points: [
 			"Building reusable components in React to Enhance the project structure.",
 			"utilizing Material UI libraries for optimal Material Design and customizations.",
-			"reducing bundle size in the project. Skilled in using Git for version control, demonstrating strong collaboration skills and effective teamwork within diverse development environments",
-			"Good in utilizing Git for version control, demonstrating strong collaboration skills and effective teamwork within diverse development environments."
+			"reducing bundle size in the project, demonstrating strong collaboration skills and effective teamwork within diverse development environments",
+			// "Good in utilizing Git for version control, demonstrating strong collaboration skills and effective teamwork within diverse development environments."
 		],
 	},
 	{

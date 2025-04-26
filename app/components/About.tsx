@@ -2,11 +2,9 @@
 
 // import { SectionWrapper } from "./HigherOrderComponents";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
-import { Tilt } from "react-tilt";
-import { services } from "../constants";
 import { fadeIn, textVariant } from "@/app/utils/motion";
 import { useRef } from "react";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 type ServiceCardProps = {
 	index: number;
@@ -64,10 +62,11 @@ const About = () => {
 		once: false,
 		amount: 0.5
 	});
+	const isMobile = useIsMobile();
 
 	return (
 		// <div className="pt-[25vh] sm:pt-[50vh]">s
-		<div className="absolute sm:bottom-[10px] bottom-[-70px] paddingX z-10">
+		<div className="absolute bottom-[10px]  paddingX z-10">
 			<motion.div
 				ref={ textRef }
 				variants={ textVariant() }
@@ -93,6 +92,7 @@ const About = () => {
 					<ServiceCard key={ service.title } index={ index } { ...service } />
 				)) }
 			</div> */}
+			{isMobile?null:
 			<div className="mt-20 w-full flex justify-center items-center">
 				<a href="#work">
 					<div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
@@ -107,7 +107,7 @@ const About = () => {
 						/>
 					</div>
 				</a>
-			</div>
+			</div>}
 		</div>
 	);
 };

@@ -105,16 +105,27 @@ const technologies = [
 
 const experiences = [
 	{
-		title: "React Developer",
-		company_name: "Future code",
-		icon: "/company/futurecode.jpeg",
-		iconBg: "#101f41",
-		date: "Feb 2021 -Jul  2022",
+		title: "Angular Developer",
+		company_name: "Wizme",
+		icon: "/company/wizme.jpeg",
+		iconBg: "#fdfdfd",
+		date: "JUL 2024 - MAY 2025",
 		points: [
-			"Determining the design and layout of web applications with accuracy.",
-			"Developed over 10 responsive web applications using React, focusing on smooth UI performance.",
-			"Successful Website Development: Designed and developed a visually appealing and user-friendly portfolio website using React.",
-			// "Positive Business Impact: Contributed to +54.25% sales and overall business growth through the improved website."
+			"Working at Wizme on a global booking system, leveraging Angular along with advanced and powerful modern technologies to build and enhance scalable, user-friendly interfaces that streamline booking processes and improve user experience",
+			"Design Maintainence and hosting maintenance.",
+		],
+	},
+	{
+		title: "Full-stack Developer",
+		company_name: "TechnoPlus",
+		icon: "/company/TechnoPlus.jpeg",
+		iconBg: "#000310",
+		date: "NOV 2023 – JUN 2024",
+		points: [
+			"Developed and maintained web applications using Node.js, NestJS, and Next.js",
+			"Designed and integrated database schemas",
+			"Enhancing the React framework structure for the TechnoPlus project.",
+			"Design Maintainence and hosting maintenance.",
 		],
 	},
 	{
@@ -132,30 +143,20 @@ const experiences = [
 	},
 	{
 		title: "React Developer",
-		company_name: "TechnoPlus",
-		icon: "/company/TechnoPlus.jpeg",
-		iconBg: "#000310",
-		date: "Nov 2023 - Jul 2024",
+		company_name: "Future code",
+		icon: "/company/futurecode.jpeg",
+		iconBg: "#101f41",
+		date: "Feb 2021 -Jul  2022",
 		points: [
-			"Enhancing the React framework structure for the TechnoPlus project.",
-			"Working with Redux to manage state and handle asynchronous operations within the application.",
-			"Utilizing Material UI to implement modern interface design concepts",
-			"Design Maintainence and hosting maintenance.",
+			"Determining the design and layout of web applications with accuracy.",
+			"Developed over 10 responsive web applications using React, focusing on smooth UI performance.",
+			"Successful Website Development: Designed and developed a visually appealing and user-friendly portfolio website using React.",
+			// "Positive Business Impact: Contributed to +54.25% sales and overall business growth through the improved website."
 		],
 	},
-	{
-		title: "Angular Developer",
-		company_name: "Wizme",
-		icon: "/company/wizme.jpeg",
-		iconBg: "#fdfdfd",
-		date: "JUL 2024 - Present",
-		points: [
-			"Enhancing the React framework structure for the TechnoPlus project.",
-			"Working with Redux to manage state and handle asynchronous operations within the application.",
-			"Utilizing Material UI to implement modern interface design concepts",
-			"Design Maintainence and hosting maintenance.",
-		],
-	},
+	
+	
+	
 ];
 
 const testimonials = [
@@ -223,6 +224,34 @@ const projects :{
 	platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web"
 }[] = [
 	{
+		name: "Teryaq",
+		description:
+			`An integrated digital ecosystem connecting factories, distributors, pharmacists, and doctors to ensure safe medicine reaches the right place at the right time with extreme precision.`,
+		tags: [
+		
+		
+			{
+				name: "Nestjs",
+				color: "pink-text-gradient",
+			},
+			{
+				name: "Nextjs",
+				color: "black-text-gradient",
+			},
+			{
+				name: "Postgesql",
+				color: "green-text-gradient",
+			},
+			{
+				name: "react",
+				color: "blue-text-gradient",
+			},
+		],
+		image: "/projectimg/Teryaq.webp",
+		platform: "Web",
+		deploy_link: "https://teryaq-website.vercel.app/",
+	},
+	{
 		name: "Wizme",
 		description:
 			`Working at Wizme on a global booking system, leveraging Angular along with advanced and powerful modern technologies to build and enhance scalable, user-friendly interfaces that streamline booking processes and improve user experience`,
@@ -267,60 +296,7 @@ const projects :{
 		platform: "Web",
 		deploy_link: "https://my-communication.com/",
 	},
-	{
-		name: "MERN Dashboard",
-		description:
-			"Building more than 20 Dashboard to control and monitor mobile and web applications",
-		tags: [
-			{
-				name: "react",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "Angular",
-				color: "orange-text-gradient",
-			},
-			{
-				name: "MongoDB",
-				color: "green-text-gradient",
-			},
-			{
-				name: "Nestjs",
-				color: "pink-text-gradient",
-			},
-			{
-				name: "Nextjs",
-				color: "black-text-gradient",
-			},
-		],
-		image: "/projectimg/mern.png",
-		source_code_link: "",
-		platform: "Netlify",
-		deploy_link: "",
-	},
-	{
-		name: "Metaverse Web 3.0",
-		description:
-			"A Modern UI/UX Landing Page using Framer Motion and TailwindCSS with a feel and looks of Web 3.0",
-		tags: [
-			{
-				name: "react",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "tailwind",
-				color: "green-text-gradient",
-			},
-			{
-				name: "framer-motion",
-				color: "orange-text-gradient",
-			},
-		],
-		image: "/projectimg/metaverse.png",
-		source_code_link: "",
-		platform: "Vercel",
-		deploy_link: "https://project-metaverse-beta.vercel.app/",
-	},
+
 	{
 		name: "Syrina e-commarce",
 		description:
@@ -377,33 +353,11 @@ const projects :{
 		platform: "Web",
 		deploy_link: "https://www.white-bright.nl/",
 	},
-	{
-		name: "Free elec",
-		description:
-			"A Next.JS Full Stack Issue Tracker made using Next.Js, ShadCN UI, Prisma, mySQL with latest features like Next.JS Server Components, and Serverless features.",
-		tags: [
-			{
-				name: "javascript",
-				color: "black-text-gradient",
-			},
-			{
-				name: "css",
-				color: "green-text-gradient",
-			},
-			{
-				name: "mySQL",
-				color: "green-text-gradient",
-			},
-		],
-		image: "/projectimg/free-elec.jpg",
-		source_code_link: "",
-		platform: "Vercel",
-		deploy_link: "https://abdshekho.github.io/Free-Elec/index.html",
-	},
+	
 	{
 		name: "Wizme widget",
 		description:
-			" Designed and developed a visually appealing and user-friendly portfolio website using Angular.",
+			"Designed and developed a visually appealing and user-friendly portfolio website using Angular.",
 		tags: [
 		
 			{
@@ -426,7 +380,7 @@ const projects :{
 		image: "/projectimg/wizmeWidget.jpg",
 		source_code_link: "",
 		platform: "Web",
-		deploy_link: "https://integ-venues-apps.wizmeapps.com/live-widget/widget.htm?id=3621d9ef-2010-41bf-9ff5-4bd191814273&name=mouakke",
+		deploy_link: "https://integ-venues-apps.wizmeapps.com/live-widget",
 	},
 	{
 		name: "Find-me",
@@ -454,6 +408,79 @@ const projects :{
 		source_code_link: "",
 		platform: "Vercel",
 		deploy_link: "https://merry-concha-82005a.netlify.app/",
+	},
+{
+		name: "Free elec",
+		description:
+			"A Next.JS Full Stack Issue Tracker made using Next.Js, ShadCN UI, Prisma, mySQL with latest features like Next.JS Server Components, and Serverless features.",
+		tags: [
+			{
+				name: "javascript",
+				color: "black-text-gradient",
+			},
+			{
+				name: "css",
+				color: "green-text-gradient",
+			},
+			{
+				name: "mySQL",
+				color: "green-text-gradient",
+			},
+		],
+		image: "/projectimg/free-elec.jpg",
+		source_code_link: "",
+		platform: "Vercel",
+		deploy_link: "https://abdshekho.github.io/Free-Elec/index.html",
+	},
+		{
+		name: "MERN Dashboard",
+		description:
+			"Building more than 20 Dashboard to control and monitor mobile and web applications",
+		tags: [
+			{
+				name: "react",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "MongoDB",
+				color: "green-text-gradient",
+			},
+			{
+				name: "Nestjs",
+				color: "pink-text-gradient",
+			},
+			{
+				name: "Nextjs",
+				color: "black-text-gradient",
+			},
+		],
+		image: "/projectimg/mern.png",
+		source_code_link: "",
+		platform: "Netlify",
+		deploy_link: "",
+	},
+	{
+		name: "Metaverse Web 3.0",
+		description:
+			"A Modern UI/UX Landing Page using Framer Motion and TailwindCSS with a feel and looks of Web 3.0",
+		tags: [
+			{
+				name: "react",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "tailwind",
+				color: "green-text-gradient",
+			},
+			{
+				name: "framer-motion",
+				color: "orange-text-gradient",
+			},
+		],
+		image: "/projectimg/metaverse.png",
+		source_code_link: "",
+		platform: "Vercel",
+		deploy_link: "https://project-metaverse-beta.vercel.app/",
 	},
 ];
 
